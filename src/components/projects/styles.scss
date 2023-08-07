@@ -1,0 +1,63 @@
+@import '../../partials/colors';
+
+.projectsSection {
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.projectsContainer {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .listItem {
+        font-size: 74px;
+        font-weight: bold;
+        cursor: pointer;
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        position: relative;
+
+        .listItem2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            width: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        &:hover {
+            .listItem2 {
+                animation: moveText 0.5s linear both;
+            
+                @keyframes moveText {
+                    to {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+.right {
+    flex: 1;
+}

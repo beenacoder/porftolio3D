@@ -1,0 +1,52 @@
+.navbarSection {
+    display: flex;
+    justify-content: center;
+}
+
+.navbarContainer {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    
+    .logo {
+        height: 50px;
+        border-radius: 30px;
+    }
+    
+    .list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        cursor: pointer;
+    }
+    .listItem {
+        &:hover {
+            color: #da4ea2;  
+        }
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        width: 100px;
+        padding: 10px;
+        background-color: #da4ea2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

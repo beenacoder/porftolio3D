@@ -1,0 +1,84 @@
+@import '../../partials/colors';
+
+.heroSection {
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heroContainer {
+    height: 100vh;
+    scroll-snap-align: center;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    h1 {
+        font-size: 74px;
+    }
+
+    .whatWeDo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .line {
+        height: 5px;
+        border-radius: 50px;
+    }
+    .subtitle {
+        color: #da4ea2;
+    }
+
+    .description {
+        font-size: 24px;
+        color: lightgray;
+    }
+
+    button {
+        border: none;
+        background-color: #da4ea2;
+        font-weight: 500;
+        color: white;
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.right{
+    flex: 3;
+    position: relative;
+
+    .rightImg {
+        width: 800px;
+        height: 600px;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        animation: animaHacker 2s infinite ease alternate;
+
+        @keyframes animaHacker {
+            to {
+                transform: translateY(30px);
+            }
+        }
+    }
+}
