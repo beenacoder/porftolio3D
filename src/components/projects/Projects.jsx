@@ -1,4 +1,9 @@
+import { useState } from 'react';
 import './styles.scss';
+import FrontEnd from '../frontEnd/FrontEnd';
+import BackEnd from '../backEnd/BackEnd';
+import WebDesign from '../webDesign/WebDesign';
+import Ecommerce from '../ecommerce/Ecommerce';
 
 const worksData = [
     "Web Design",
@@ -10,6 +15,9 @@ const worksData = [
 
 
 const Projects = () => {
+    const [works, setWorks] = useState("Web Design");
+
+
     return (
         <div className='projectsSection'>
             <div className="projectsContainer">
@@ -17,7 +25,7 @@ const Projects = () => {
                     <ul className="list">
                         {worksData.map((work, i) => (
                             <>
-                                <li key={i} text={work} className="listItem">{work}
+                                <li key={i} text={work} className="listItem" onClick={() => setWorks(work)}>{work}
                                     <span className="listItem2">{work}</span>
                                 </li>
                                 
@@ -27,7 +35,7 @@ const Projects = () => {
                     </ul>
                 </div>
                 <div className="right">
-                    Animation
+                    {works === "Web Design" ? (<WebDesign />) : works === "Frontend" ? (<FrontEnd />) : works === "Backend" ? <BackEnd /> : works === "Ecommerce" ? <Ecommerce /> : <Development />}
                 </div>
             </div>
         </div>

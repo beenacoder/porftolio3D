@@ -1,5 +1,8 @@
 import Navbar from '../navbar/Navbar';
+import { Canvas } from '@react-three/fiber';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
 import './styles.scss';
+
 
 const Hero = () => {
     return (
@@ -20,7 +23,14 @@ const Hero = () => {
 
 
                 <div className="right">
-                    {/* Modelo 3D */}
+                    <Canvas>
+                        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={5} />
+                        <ambientLight intensity={1} />
+                        <directionalLight position={[1, 2, 3]} />
+                        <Sphere args={[1, 100, 200]} scale={2.4}>
+                            <MeshDistortMaterial color={"#b058f4"} attach={"material"} distort={0.5} speed={2} />
+                        </Sphere>
+                    </Canvas>  
                     <img src="./img/hacker.png" alt="" className='rightImg'/>
                 </div>
             </div>

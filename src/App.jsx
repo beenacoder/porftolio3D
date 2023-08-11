@@ -3,7 +3,7 @@ import Hero from "./components/hero/Hero"
 import Projects from "./components/projects/Projects"
 import Profile from "./components/profile/Profile"
 import './app.scss';
-import Test from "./components/Test";
+
 
 function App() {
     return (
@@ -12,7 +12,6 @@ function App() {
             <Profile />
             <Projects />
             <Contact />
-            <Test />
         </div>
     )
 }
